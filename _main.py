@@ -18,8 +18,8 @@ neighbor_offsets = np.array([
 # define the seed from here
 def seed_custom():
     add_seed(shape[0]//2, shape[1]//2, shape[2]//2)
-    add_seed(shape[0]//2-1, shape[1]//2-1, shape[2]//2)
-    add_seed(shape[0]//2+1, shape[1]//2, shape[2]//2)
+    add_seed(shape[0]//2, shape[1]//2+1, shape[2]//2+1)
+    add_seed(shape[0]//2+1, shape[1]//2+1, shape[2]//2)
 
 
 # Add node (crystal growth)
