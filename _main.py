@@ -107,7 +107,7 @@ def get_suppressed_sites(grid, n_crit=3, n_max=6):
     return (grid == 0) & (neighbor_count >= n_crit) & (saturated_neighbors > 0)
 
 # ---------- Plotting ----------
-def plot_combined(grid, n_crit=3, n_max=6, show_active=True, show_suppressed=True):
+def plot_combined(grid, n_crit=2, n_max=6, show_active=True, show_suppressed=True):
     traces = []
 
     if show_active:
@@ -175,7 +175,7 @@ def show_combined(b):
                       show_active_checkbox.value, show_suppressed_checkbox.value)
 
 # ---------- UI widgets ----------
-n_crit_slider = widgets.IntSlider(value=3, min=1, max=12, description='Min Neighbors')
+n_crit_slider = widgets.IntSlider(value=2, min=1, max=12, description='Min Neighbors')
 n_max_slider = widgets.IntSlider(value=6, min=1, max=12, description='Max Neighbors')
 p_slider = widgets.FloatSlider(value=1.0, min=0.0, max=1.0, step=0.05, description='Growth Prob')
 
